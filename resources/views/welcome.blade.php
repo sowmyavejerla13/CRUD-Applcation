@@ -55,4 +55,3 @@ Welcome
     </script>
 <!-- $items->render() for pagination-->
 @endsection
-
