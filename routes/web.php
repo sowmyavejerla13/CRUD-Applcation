@@ -36,3 +36,8 @@ Route::post('/edit/{id}',[
 		 'as' => 'postEdit',
 		 'uses' => 'HomeController@postEdit'
 		 ]);
+
+/*Route::post('/search',[
+		 'as' => 'searchbox',
+		 'uses' => 'HomeController@postSearch'
+		 ]);*/
