@@ -11,7 +11,8 @@ class HomeController extends Controller
     public function getItems()
     {
     	# code...
-    	$items = Item::orderBy('id','DESC')->paginate(10);
+    	// $items = Item::orderBy('id','DESC')->paginate(10);
+        $items = Item::orderBy('id','DESC')->get();
     	return view('welcome')->with(['items'=>$items]);
     }
 
@@ -77,4 +78,12 @@ class HomeController extends Controller
         return redirect()->route('welcome');
     	
     }
+  /*  public function postSearch(Request $request)
+    {
+         # code...
+        $items = Item::where('title', 'like', '%' . $request['search'] . '%')->paginate(10);
+      //return response()->json(['msg-body'=>$items],200);
+       return view('welcome')->with(['items'=>$items]);
+    }*/
+
 }
